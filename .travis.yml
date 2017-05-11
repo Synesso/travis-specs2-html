@@ -8,8 +8,8 @@ scala:
 sudo: true
 
 before_install:
-  - apt-get install -y cabal
-  - cabal install pandoc
+  - sudo apt-get install -y cabal
+  - sudo cabal install pandoc
 
 script:
   - sbt test
