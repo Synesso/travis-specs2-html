@@ -5,15 +5,14 @@ jdk: oraclejdk8
 scala:
   - 2.11.8
 
-sudo: required
-
-before_install:
-  - sudo add-apt-repository -y ppa:marutter/c2d4u
-  - sudo apt-get -y update
-  - sudo apt-get install -y pandoc
+addons:
+  apt_packages:
+    - pandoc
+    
+pandoc_version: 1.16
 
 script:
-  - sudo sbt test
+  - sbt test
 
 before_cache:
   - find $HOME/.ivy2 -name "ivydata-*.properties" -delete
