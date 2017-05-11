@@ -21,4 +21,3 @@ libraryDependencies ++= Seq(
 )
 
 testOptions in Test += Tests.Argument("html", "console")
-
