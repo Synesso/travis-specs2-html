@@ -5,12 +5,12 @@ jdk: oraclejdk8
 scala:
   - 2.11.8
 
-sudo: true
+sudo: false
 
 before_install:
-  - sudo add-apt-repository -y ppa:marutter/c2d4u
-  - sudo apt-get update
-  - sudo apt-get install pandoc
+  - add-apt-repository -y ppa:marutter/c2d4u
+  - apt-get update
+  - apt-get install pandoc
 
 script:
   - sbt test
