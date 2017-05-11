@@ -8,7 +8,7 @@ scala:
 sudo: true
 
 before_install:
-  - sudo apt-get install -y cabal
+  - sudo apt-get install -y haskell-platform
   - sudo cabal install pandoc
 
 script:
