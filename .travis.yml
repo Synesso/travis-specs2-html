@@ -7,7 +7,7 @@ scala:
 
 addons:
   apt_packages:
-    - pandoc=1.16.0.2*
+    - pandoc=1.16*
 
 script:
   - sbt test
