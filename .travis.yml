@@ -5,9 +5,11 @@ jdk: oraclejdk8
 scala:
   - 2.11.8
 
+dist: trusty
+
 addons:
   apt_packages:
-    - pandoc=1.16*
+    - pandoc
 
 script:
   - sbt test
