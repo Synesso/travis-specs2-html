@@ -5,9 +5,11 @@ jdk: oraclejdk8
 scala:
   - 2.11.8
 
-addons:
-  apt_packages:
-    - pandoc
+sudo: true
+
+before_install:
+  - apt-get install -y cabal
+  - cabal install pandoc
 
 script:
   - sbt test
