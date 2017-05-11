@@ -9,6 +9,7 @@ sudo: true
 
 before_install:
   - sudo apt-get install -y haskell-platform
+  - sudo cabal update
   - sudo cabal install pandoc
 
 script:
