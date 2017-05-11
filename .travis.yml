@@ -1,0 +1,25 @@
+language: scala
+
+jdk: oraclejdk8
+
+scala:
+  - 2.11.8
+
+addons:
+  apt_packages:
+    - pandoc
+
+script:
+  - sbt test
+
+before_cache:
+  - find $HOME/.ivy2 -name "ivydata-*.properties" -delete
+  - find $HOME/.sbt -name "*.lock" -delete
+
+cache:
+  branch: md5deep
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot/
+    - $HOME/.sbt/launchers/
+    - $HOME/.coursier
