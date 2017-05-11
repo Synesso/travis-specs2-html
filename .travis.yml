@@ -5,8 +5,9 @@ jdk: oraclejdk8
 scala:
   - 2.11.8
 
-install:
-  - "sudo apt-get install pandoc"
+addons:
+  apt_packages:
+    - pandoc
 
 script:
   - sbt test
